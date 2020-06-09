@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    var s = "PPALLP";
+    var checkRecord = function(s) {
+       // return !/(A.*A.*|LLL)/.test(s);
+      var count =  s.match(/A/g);
+      var count1 = s.match(/L{3,}/g);
+       // console.log(s.match(/A/g));
+       if(count && count.length>1) {
+        return false;
+       }
+       if(count1) {
+           return false;
+       }
+
+       return true;
+};
+console.log(checkRecord(s));
+</script>
+</body>
+</html>

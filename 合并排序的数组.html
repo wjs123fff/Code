@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+var A = [1,2,3,0,0,0], m = 3;
+var B = [2,5,6],       n = 3;
+    var merge = function(A, m, B, n) {
+        var m1 = m-1;
+        var n1 = n-1;
+        var res = m+n-1;
+        while(n1 >= 0) {
+            A[res--] = (m1 >= 0 && A[m1] > B[n1] ) ? A[m1--] : B[n1--];
+        }
+
+        return A;
+
+};
+console.log(merge(A,m,B,n));
+</script>
+</body>
+</html>

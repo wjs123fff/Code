@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+var n = 00000000000110000111100000001010;
+    // var hammingWeight = function(n) {
+       //  var sum = 0;
+       // var n1 = n.toString();
+       //  for(var i = 0; i < n1.length; i++) {
+       //      if(n1[i] == '1') {
+       //         sum ++;
+       //      }
+       //  }
+       // return sum;
+       // int hammingWeight(uint32_t n) {
+//    var  count = 0;
+//     while(n != 0){
+//         if(n % 2 == 1){
+//             count++;
+//         }
+//         n /= 2;
+//     }
+//     return count;
+// };
+var hammingWeight = function(n) {
+  let count = 0;
+  while (n !== 0) {
+    n = n & (n - 1);
+    count++;
+  }
+
+  return count;
+};
+
+console.log(hammingWeight(n));
+</script>
+</body>
+</html>
